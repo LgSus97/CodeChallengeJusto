@@ -7,11 +7,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LaunchViewController: UIViewController, Storyboarded, LoaderPresentable {
   
   @IBOutlet weak var tableView : UITableView!
   
   var launchViewModel = LaunchViewModel()
+  
+  private weak var coordinator: LaunchCoordinator?
+
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -20,24 +23,26 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
   }
 
+  func setup(coordinator : LaunchCoordinator){
+    self.coordinator = coordinator
+  }
+  
   private func fetchAPI(){
-    launchViewModel.delegate = self
-    launchViewModel.fetchLaunchList()
-    
+    presentLoader { [self] in
+      launchViewModel.delegate = self
+      launchViewModel.fetchLaunchList()
+    }
   }
   
   private func setTableView(){
     self.tableView.register(UINib(nibName: "LaunchTableViewCell", bundle: nil), forCellReuseIdentifier: "LaunchTableViewCell")
   }
   
-  
-  
-  
 
 }
 
 
-extension ViewController: UITableViewDataSource, UITableViewDelegate{
+extension LaunchViewController: UITableViewDataSource, UITableViewDelegate{
 
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return launchViewModel.launchList.count
@@ -58,12 +63,16 @@ extension ViewController: UITableViewDataSource, UITableViewDelegate{
   
 }
 
-extension ViewController : LaunchViewModelDelegate {
+extension LaunchViewController : LaunchViewModelDelegate {
   func didReceiveData() {
-    self.tableView.reloadData()
+    dismissLoader {
+      self.tableView.reloadData()
+    }
   }
   
   func didFail(errorMessage: String) {
-    debugPrint(errorMessage)
+    dismissLoader {
+      debugPrint(errorMessage)
+    }
   }
 }

@@ -26,9 +26,9 @@ class LaunchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-  func configCell(item: LaunchesQuery.Data.Launch){
-    missinNameLabel.text = item.missionName
-    siteNameLabel.text = item.launchSite?.siteName
-    rocketNameLabel.text = item.rocket?.rocketName
+  func configCell(item: LaunchesQuery.Data.LaunchesPastResult){
+//    missinNameLabel.text = item.
+//    siteNameLabel.text = item.launchSite?.siteName
+//    rocketNameLabel.text = item.rocket?.rocketName
   }
 }

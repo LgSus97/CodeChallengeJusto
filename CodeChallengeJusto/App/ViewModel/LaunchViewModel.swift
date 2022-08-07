@@ -14,7 +14,7 @@ protocol LaunchViewModelDelegate : AnyObject {
 }
 
 class LaunchViewModel {
-  var launchList = [LaunchesQuery.Data.Launch] ()
+  var launchList = [LaunchesQuery.Data.LaunchesPastResult] ()
   weak var delegate : LaunchViewModelDelegate?
   
   func fetchLaunchList() {
@@ -29,7 +29,7 @@ class LaunchViewModel {
           let message = errors.map { $0.localizedDescription }.joined(separator: "\n")
           self?.delegate?.didFail(errorMessage: message)
         }
-        if let launchConnection = graphQLResult.data?.launches{
+        if let launchConnection = graphQLResult.data?.launchesPastResult{
           self?.launchList.append(contentsOf: launchConnection.compactMap { $0 })
         }
         self?.delegate?.didReceiveData()
