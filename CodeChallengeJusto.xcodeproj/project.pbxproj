@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		068024E8922CB4E97576FAD9 /* Pods_CodeChallengeJusto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43EEC4BA269ACDB7037D7B9C /* Pods_CodeChallengeJusto.framework */; };
+		71EEFB779B51551F03628098 /* Pods_CodeChallengeJustoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4BF89176BBA42C1F8CB8D299 /* Pods_CodeChallengeJustoTests.framework */; };
 		C0979C8B289F0DDE006AD353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8A289F0DDE006AD353 /* AppDelegate.swift */; };
 		C0979C8D289F0DDE006AD353 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */; };
 		C0979C8F289F0DDE006AD353 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8E289F0DDE006AD353 /* ViewController.swift */; };
@@ -16,6 +18,14 @@
 		C0979CA2289F0DE1006AD353 /* CodeChallengeJustoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CA1289F0DE1006AD353 /* CodeChallengeJustoTests.swift */; };
 		C0979CAC289F0DE1006AD353 /* CodeChallengeJustoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CAB289F0DE1006AD353 /* CodeChallengeJustoUITests.swift */; };
 		C0979CAE289F0DE1006AD353 /* CodeChallengeJustoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CAD289F0DE1006AD353 /* CodeChallengeJustoUITestsLaunchTests.swift */; };
+		C0979CBE289F116F006AD353 /* ApolloNetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CBD289F116F006AD353 /* ApolloNetworkHelper.swift */; };
+		C0979CC0289F1195006AD353 /* LaunchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CBF289F1195006AD353 /* LaunchList.swift */; };
+		C0979CC2289F11D8006AD353 /* LaunchList.graphql in Resources */ = {isa = PBXBuildFile; fileRef = C0979CC1289F11D8006AD353 /* LaunchList.graphql */; };
+		C0979CC6289F24EB006AD353 /* schema.json in Resources */ = {isa = PBXBuildFile; fileRef = C0979CC5289F24EB006AD353 /* schema.json */; };
+		C0979CCA289F2CAF006AD353 /* LaunchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CC9289F2CAF006AD353 /* LaunchViewModel.swift */; };
+		C0979CD2289F7778006AD353 /* LaunchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979CD0289F7778006AD353 /* LaunchTableViewCell.swift */; };
+		C0979CD3289F7778006AD353 /* LaunchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C0979CD1289F7778006AD353 /* LaunchTableViewCell.xib */; };
+		CDCCD10BEC80333D44B51B45 /* Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BFE2443317F69CBD3830486 /* Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +46,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43EEC4BA269ACDB7037D7B9C /* Pods_CodeChallengeJusto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallengeJusto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE97F61D60EAE920FE23E31 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJusto-CodeChallengeJustoUITests.release.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJusto-CodeChallengeJustoUITests/Pods-CodeChallengeJusto-CodeChallengeJustoUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4BF89176BBA42C1F8CB8D299 /* Pods_CodeChallengeJustoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallengeJustoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		55405EF32071438BBA55743E /* Pods-CodeChallengeJustoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJustoTests.release.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJustoTests/Pods-CodeChallengeJustoTests.release.xcconfig"; sourceTree = "<group>"; };
+		686B7D48FEF127ED8B03C615 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJusto-CodeChallengeJustoUITests.debug.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJusto-CodeChallengeJustoUITests/Pods-CodeChallengeJusto-CodeChallengeJustoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		68B460898E6C05C2C4172007 /* Pods-CodeChallengeJusto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJusto.debug.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJusto/Pods-CodeChallengeJusto.debug.xcconfig"; sourceTree = "<group>"; };
+		8BFE2443317F69CBD3830486 /* Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9F069D51BE94665409229D8 /* Pods-CodeChallengeJustoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJustoTests.debug.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJustoTests/Pods-CodeChallengeJustoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0979C87289F0DDE006AD353 /* CodeChallengeJusto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallengeJusto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0979C8A289F0DDE006AD353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +67,14 @@
 		C0979CA7289F0DE1006AD353 /* CodeChallengeJustoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeChallengeJustoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0979CAB289F0DE1006AD353 /* CodeChallengeJustoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallengeJustoUITests.swift; sourceTree = "<group>"; };
 		C0979CAD289F0DE1006AD353 /* CodeChallengeJustoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeChallengeJustoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0979CBD289F116F006AD353 /* ApolloNetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApolloNetworkHelper.swift; sourceTree = "<group>"; };
+		C0979CBF289F1195006AD353 /* LaunchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchList.swift; sourceTree = "<group>"; };
+		C0979CC1289F11D8006AD353 /* LaunchList.graphql */ = {isa = PBXFileReference; lastKnownFileType = text; path = LaunchList.graphql; sourceTree = "<group>"; };
+		C0979CC5289F24EB006AD353 /* schema.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = schema.json; sourceTree = "<group>"; };
+		C0979CC9289F2CAF006AD353 /* LaunchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewModel.swift; sourceTree = "<group>"; };
+		C0979CD0289F7778006AD353 /* LaunchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchTableViewCell.swift; sourceTree = "<group>"; };
+		C0979CD1289F7778006AD353 /* LaunchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LaunchTableViewCell.xib; sourceTree = "<group>"; };
+		E9D1DB51FFF72BDB27033854 /* Pods-CodeChallengeJusto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CodeChallengeJusto.release.xcconfig"; path = "Target Support Files/Pods-CodeChallengeJusto/Pods-CodeChallengeJusto.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				068024E8922CB4E97576FAD9 /* Pods_CodeChallengeJusto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71EEFB779B51551F03628098 /* Pods_CodeChallengeJustoTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +98,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDCCD10BEC80333D44B51B45 /* Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		99DCD783FD6995D265B2A368 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43EEC4BA269ACDB7037D7B9C /* Pods_CodeChallengeJusto.framework */,
+				8BFE2443317F69CBD3830486 /* Pods_CodeChallengeJusto_CodeChallengeJustoUITests.framework */,
+				4BF89176BBA42C1F8CB8D299 /* Pods_CodeChallengeJustoTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C0979C7E289F0DDD006AD353 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				C0979CA0289F0DE1006AD353 /* CodeChallengeJustoTests */,
 				C0979CAA289F0DE1006AD353 /* CodeChallengeJustoUITests */,
 				C0979C88289F0DDE006AD353 /* Products */,
+				F45410082B082BC421B20513 /* Pods */,
+				99DCD783FD6995D265B2A368 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +140,9 @@
 		C0979C89289F0DDE006AD353 /* CodeChallengeJusto */ = {
 			isa = PBXGroup;
 			children = (
+				C0979CBA289F1121006AD353 /* View */,
+				C0979CBB289F112A006AD353 /* ViewModel */,
+				C0979CC8289F2745006AD353 /* GraphQL */,
 				C0979C8A289F0DDE006AD353 /* AppDelegate.swift */,
 				C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */,
 				C0979C8E289F0DDE006AD353 /* ViewController.swift */,
@@ -127,6 +171,55 @@
 			path = CodeChallengeJustoUITests;
 			sourceTree = "<group>";
 		};
+		C0979CBA289F1121006AD353 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C0979CCF289F775D006AD353 /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C0979CBB289F112A006AD353 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C0979CC9289F2CAF006AD353 /* LaunchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C0979CC8289F2745006AD353 /* GraphQL */ = {
+			isa = PBXGroup;
+			children = (
+				C0979CC5289F24EB006AD353 /* schema.json */,
+				C0979CBD289F116F006AD353 /* ApolloNetworkHelper.swift */,
+				C0979CBF289F1195006AD353 /* LaunchList.swift */,
+				C0979CC1289F11D8006AD353 /* LaunchList.graphql */,
+			);
+			name = GraphQL;
+			sourceTree = "<group>";
+		};
+		C0979CCF289F775D006AD353 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				C0979CD0289F7778006AD353 /* LaunchTableViewCell.swift */,
+				C0979CD1289F7778006AD353 /* LaunchTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		F45410082B082BC421B20513 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68B460898E6C05C2C4172007 /* Pods-CodeChallengeJusto.debug.xcconfig */,
+				E9D1DB51FFF72BDB27033854 /* Pods-CodeChallengeJusto.release.xcconfig */,
+				686B7D48FEF127ED8B03C615 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.debug.xcconfig */,
+				4BE97F61D60EAE920FE23E31 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.release.xcconfig */,
+				A9F069D51BE94665409229D8 /* Pods-CodeChallengeJustoTests.debug.xcconfig */,
+				55405EF32071438BBA55743E /* Pods-CodeChallengeJustoTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +227,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0979CB1289F0DE1006AD353 /* Build configuration list for PBXNativeTarget "CodeChallengeJusto" */;
 			buildPhases = (
+				1BC5184F88E2D58ACADD97A5 /* [CP] Check Pods Manifest.lock */,
+				B65312CA7E7C85AD379686DB /* [CP] Embed Pods Frameworks */,
 				C0979C83289F0DDD006AD353 /* Sources */,
 				C0979C84289F0DDD006AD353 /* Frameworks */,
 				C0979C85289F0DDD006AD353 /* Resources */,
+				C0979CC7289F2545006AD353 /* Apollo */,
 			);
 			buildRules = (
 			);
@@ -151,6 +247,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0979CB4289F0DE1006AD353 /* Build configuration list for PBXNativeTarget "CodeChallengeJustoTests" */;
 			buildPhases = (
+				836E5459A08210551CD60CBE /* [CP] Check Pods Manifest.lock */,
 				C0979C99289F0DE1006AD353 /* Sources */,
 				C0979C9A289F0DE1006AD353 /* Frameworks */,
 				C0979C9B289F0DE1006AD353 /* Resources */,
@@ -169,9 +266,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0979CB7289F0DE1006AD353 /* Build configuration list for PBXNativeTarget "CodeChallengeJustoUITests" */;
 			buildPhases = (
+				18269A493C2FAC378B66DABF /* [CP] Check Pods Manifest.lock */,
 				C0979CA3289F0DE1006AD353 /* Sources */,
 				C0979CA4289F0DE1006AD353 /* Frameworks */,
 				C0979CA5289F0DE1006AD353 /* Resources */,
+				21958D9695F2DC90070C380B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -231,8 +330,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0979CD3289F7778006AD353 /* LaunchTableViewCell.xib in Resources */,
 				C0979C97289F0DE1006AD353 /* LaunchScreen.storyboard in Resources */,
+				C0979CC6289F24EB006AD353 /* schema.json in Resources */,
 				C0979C94289F0DE1006AD353 /* Assets.xcassets in Resources */,
+				C0979CC2289F11D8006AD353 /* LaunchList.graphql in Resources */,
 				C0979C92289F0DDE006AD353 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -253,14 +355,139 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		18269A493C2FAC378B66DABF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeChallengeJusto-CodeChallengeJustoUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1BC5184F88E2D58ACADD97A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeChallengeJusto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		21958D9695F2DC90070C380B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto-CodeChallengeJustoUITests/Pods-CodeChallengeJusto-CodeChallengeJustoUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto-CodeChallengeJustoUITests/Pods-CodeChallengeJusto-CodeChallengeJustoUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto-CodeChallengeJustoUITests/Pods-CodeChallengeJusto-CodeChallengeJustoUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		836E5459A08210551CD60CBE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CodeChallengeJustoTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B65312CA7E7C85AD379686DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto/Pods-CodeChallengeJusto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto/Pods-CodeChallengeJusto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CodeChallengeJusto/Pods-CodeChallengeJusto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0979CC7289F2545006AD353 /* Apollo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Apollo;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Don't run this during index builds\nif [ $ACTION = \"indexbuild\" ]; then exit 0; fi\nSCRIPT_PATH=\"${PODS_ROOT}/Apollo/scripts\"\ncd \"${SRCROOT}/${TARGET_NAME}\"\n\"${SCRIPT_PATH}\"/run-bundled-codegen.sh codegen:generate --target=swift --includes=./**/LaunchList.graphql --localSchemaFile=\"schema.json\" LaunchList.swift\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C0979C83289F0DDD006AD353 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0979CC0289F1195006AD353 /* LaunchList.swift in Sources */,
 				C0979C8F289F0DDE006AD353 /* ViewController.swift in Sources */,
+				C0979CBE289F116F006AD353 /* ApolloNetworkHelper.swift in Sources */,
 				C0979C8B289F0DDE006AD353 /* AppDelegate.swift in Sources */,
 				C0979C8D289F0DDE006AD353 /* SceneDelegate.swift in Sources */,
+				C0979CD2289F7778006AD353 /* LaunchTableViewCell.swift in Sources */,
+				C0979CCA289F2CAF006AD353 /* LaunchViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +659,7 @@
 		};
 		C0979CB2289F0DE1006AD353 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68B460898E6C05C2C4172007 /* Pods-CodeChallengeJusto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +688,7 @@
 		};
 		C0979CB3289F0DE1006AD353 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9D1DB51FFF72BDB27033854 /* Pods-CodeChallengeJusto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -488,6 +717,7 @@
 		};
 		C0979CB5289F0DE1006AD353 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9F069D51BE94665409229D8 /* Pods-CodeChallengeJustoTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -508,6 +738,7 @@
 		};
 		C0979CB6289F0DE1006AD353 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55405EF32071438BBA55743E /* Pods-CodeChallengeJustoTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -528,6 +759,7 @@
 		};
 		C0979CB8289F0DE1006AD353 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 686B7D48FEF127ED8B03C615 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -546,6 +778,7 @@
 		};
 		C0979CB9289F0DE1006AD353 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BE97F61D60EAE920FE23E31 /* Pods-CodeChallengeJusto-CodeChallengeJustoUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

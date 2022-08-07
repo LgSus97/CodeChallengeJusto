@@ -1,0 +1,22 @@
+query Launches{
+  launches {
+    launch_date_local
+    launch_site {
+      site_name
+    }
+    mission_id
+    mission_name
+    rocket {
+      rocket_name
+      rocket {
+        company
+        name
+        mass {
+          kg
+        }
+      }
+    }
+  }
+}
+
+
