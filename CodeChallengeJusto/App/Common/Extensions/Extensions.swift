@@ -29,6 +29,11 @@ extension UILabel{
     self.textColor = color
   }
   
+  
+  func apolloAzureBigTitleBold(){
+    self.setStyleBold(size: UIFont.sizes.bigTitle , color: UIColor.font.apolloAzure)
+  }
+  
   func darkTitleBold(){
     self.setStyleBold(size: UIFont.sizes.title , color: UIColor.font.dark)
   }
@@ -48,32 +53,10 @@ extension UILabel{
 }
 
 extension UIButton{
-  func solid(radius:CGFloat? = 20){
+  func configButton(radius:CGFloat? = 20){
     self.clipsToBounds = true
-    self.setBackgroundColor(color: UIColor(named: "ApolloAzure") ?? .blue, forState: .normal)
-    self.setBackgroundColor(color: UIColor(named: "GrayGranite") ?? .lightGray, forState: .disabled)
-    self.setTitleColor(.white, for: .normal)
-    self.setTitleColor(.darkGray, for: .disabled)
     self.tintColor = .white
-    self.setDefaultHeight()
     self.layer.cornerRadius = radius ?? 20;
-  }
-  
-  func setBackgroundColor(color: UIColor, forState: UIControl.State){
-    self.clipsToBounds = true
-    UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
-    if let context = UIGraphicsGetCurrentContext(){
-      context.setFillColor(color.cgColor)
-      context.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
-      let colorImage = UIGraphicsGetImageFromCurrentImageContext()
-      UIGraphicsEndImageContext()
-      self.setBackgroundImage(colorImage, for: forState)
-    }
-  }
-  
-  func setDefaultHeight(){
-    let heightConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 40)
-    self.addConstraint(heightConstraint)
   }
 }
 extension String{

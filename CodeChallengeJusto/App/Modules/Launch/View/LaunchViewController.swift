@@ -10,6 +10,7 @@ import UIKit
 class LaunchViewController: UIViewController, Storyboarded, LoaderPresentable {
   
   @IBOutlet weak var tableView : UITableView!
+  @IBOutlet weak var tittleLabel: UILabel!
   
   var launchViewModel = LaunchViewModel()
   
@@ -18,13 +19,24 @@ class LaunchViewController: UIViewController, Storyboarded, LoaderPresentable {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    setTableView()
     fetchAPI()
     // Do any additional setup after loading the view.
   }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    setTableView()
+    setTextAndStyles()
+  }
+  
 
   func setup(coordinator : LaunchCoordinator){
     self.coordinator = coordinator
+  }
+  
+  func setTextAndStyles(){
+    self.title = "Space X 🚀"
+    tittleLabel.text = "Launches Past"
+    tittleLabel.apolloAzureBigTitleBold()
   }
   
   private func fetchAPI(){
@@ -36,9 +48,10 @@ class LaunchViewController: UIViewController, Storyboarded, LoaderPresentable {
   
   private func setTableView(){
     self.tableView.register(UINib(nibName: "LaunchTableViewCell", bundle: nil), forCellReuseIdentifier: "LaunchTableViewCell")
+    tableView.separatorColor = UIColor.clear
+
   }
   
-
 }
 
 
@@ -61,9 +74,8 @@ extension LaunchViewController: UITableViewDataSource, UITableViewDelegate{
   }
   
   func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-    return 120
+    return 150
   }
-  
   
 }
 
@@ -76,7 +88,7 @@ extension LaunchViewController : LaunchViewModelDelegate {
   
   func didFail(errorMessage: String) {
     dismissLoader {
-      debugPrint(errorMessage)
+      self.showMessage(body: errorMessage , title: "Error")
     }
   }
 }

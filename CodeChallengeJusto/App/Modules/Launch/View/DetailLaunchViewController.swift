@@ -9,13 +9,18 @@ import UIKit
 
 class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresentable {
   
+  
+  @IBOutlet weak var detailTitleLabel: UILabel!
+  @IBOutlet weak var dateLabel: UILabel!
+  @IBOutlet weak var siteNameLongLabel: UILabel!
+  @IBOutlet weak var rocketNameLabel: UILabel!
+  @IBOutlet weak var rocketType: UILabel!
+  
+  
   @IBOutlet weak var collectionView: UICollectionView!
   @IBOutlet weak var pageControl: UIPageControl!
-  
   @IBOutlet weak var detailLabel: UILabel!
-  
-  
-  
+
   @IBOutlet weak var playVideoButton: UIButton!
   @IBOutlet weak var infoLaunchButton: UIButton!
   private weak var coordinator: LaunchCoordinator?
@@ -63,13 +68,37 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
   }
   
   func setTextAndStyles(){
-    detailLabel.graySubTitle()
+    self.title = item?.missionName
+    
+    detailTitleLabel.text = "Details"
+    dateLabel.text = "Date: " + Date().changeDateFormat(dateString: item?.launchDateLocal ?? "", fromFormat: "yyyy-MM-dd'T'HH:mm:ssZ" , toFormat: "MMM d, h:mm a")
+    siteNameLongLabel.text = "Site: " + (item?.launchSite?.siteNameLong ?? "- - -")
+    rocketNameLabel.text = "Rocket name: " + (item?.rocket?.rocketName ?? "- - -")
+    rocketType.text = "Rocket type: " + (item?.rocket?.rocketType ?? "- - -")
     detailLabel.text = item?.details
+
+    detailTitleLabel.apolloAzureBigTitleBold()
+    detailLabel.darkTitleBold()
+    dateLabel.graySubTitle()
+    siteNameLongLabel.graySubTitle()
+    rocketNameLabel.graySubTitle()
+    rocketType.graySubTitle()
+    detailLabel.graySubTitle()
+    
+    dateLabel.lineBreakMode = .byWordWrapping
+    dateLabel.numberOfLines = 0
+    
+    siteNameLongLabel.lineBreakMode = .byWordWrapping
+    siteNameLongLabel.numberOfLines = 0
+    
     detailLabel.lineBreakMode = .byWordWrapping
     detailLabel.numberOfLines = 0
     
-    playVideoButton.solid()
-    infoLaunchButton.solid()
+    rocketType.lineBreakMode = .byWordWrapping
+    rocketType.numberOfLines = 0
+    
+    playVideoButton.configButton()
+    infoLaunchButton.configButton()
     
     playVideoButton.setTitle("YT Video", for: .normal)
     infoLaunchButton.setTitle("Launch Info", for: .normal)
@@ -137,7 +166,7 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
   }
   
   @IBAction func infoLaunchAction(_ sender: Any) {
-    coordinator?.presentWebView(urlInfo: item?.links?.presskit ?? "")
+    coordinator?.presentWebView(urlInfo: item?.links?.articleLink ?? "")
   }
   
 }

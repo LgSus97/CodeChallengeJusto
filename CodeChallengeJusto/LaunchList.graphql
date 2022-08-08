@@ -3,6 +3,7 @@ query Launches {
     launch_date_local
     launch_site {
       site_name
+      site_name_long
     }
     mission_id
     mission_name
@@ -11,8 +12,11 @@ query Launches {
       article_link
       flickr_images
       mission_patch_small
-      presskit
       video_link
+    }
+    rocket {
+      rocket_name
+      rocket_type
     }
   }
 }

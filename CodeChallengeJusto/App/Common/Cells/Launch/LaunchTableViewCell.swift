@@ -14,9 +14,8 @@ class LaunchTableViewCell: UITableViewCell {
   @IBOutlet weak var siteNameLabel : UILabel!
   @IBOutlet weak var dateLabel : UILabel!
   @IBOutlet weak var missionImageView : UIImageView!
-  @IBOutlet weak var contenerView: UIView!
-
-
+  @IBOutlet weak var mainView: UIView!
+  
   
   override func awakeFromNib() {
     super.awakeFromNib()
@@ -41,6 +40,7 @@ class LaunchTableViewCell: UITableViewCell {
     missionNameLabel.darkTitleBold()
     siteNameLabel.graySubTitle()
     dateLabel.graySubTitle()
+    mainView.cardShadow()
   }
   
   func configCell(item: LaunchesQuery.Data.Launch){
