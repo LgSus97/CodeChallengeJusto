@@ -5,22 +5,26 @@ PODS:
   - Apollo (0.53.0):
     - Apollo/Core (= 0.53.0)
   - Apollo/Core (0.53.0)
+  - youtube-ios-player-helper (1.0.4)
 
 DEPENDENCIES:
   - AlamofireImage (~> 4.1)
   - Apollo
+  - youtube-ios-player-helper
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
     - Apollo
+    - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
   Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
   Apollo: 204819ea82022fbc59ad05056820df867f19bd02
+  youtube-ios-player-helper: e9b97535e816db3152179d84d999bc1807ecd689
 
-PODFILE CHECKSUM: 842551bcace09ca3c050c0bd32f12f431bf22319
+PODFILE CHECKSUM: fda887051fb0f102715c446179781dc67cb502c4
 
-COCOAPODS: 1.11.2
+COCOAPODS: 1.11.3

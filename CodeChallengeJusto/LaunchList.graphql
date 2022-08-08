@@ -6,6 +6,7 @@ query Launches {
     }
     mission_id
     mission_name
+    details
     links {
       article_link
       flickr_images

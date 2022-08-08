@@ -7,6 +7,46 @@
 
 import UIKit
 
+extension UILabel{
+  
+  func setStyleBold(size: CGFloat, color: UIColor){
+    self.font = UIFont.getBold(size: size)
+    self.textColor = color
+  }
+  
+  func setStyleSemiBold(size: CGFloat, color: UIColor){
+    self.font = UIFont.getSemiBold(size: size)
+    self.textColor = color
+  }
+  
+  func setStyleMedium(size: CGFloat, color: UIColor){
+    self.font = UIFont.getMedium(size: size)
+    self.textColor = color
+  }
+  
+  func setStyleRegular(size: CGFloat, color: UIColor){
+    self.font = UIFont.getRegular(size: size)
+    self.textColor = color
+  }
+  
+  func darkTitleBold(){
+    self.setStyleBold(size: UIFont.sizes.title , color: UIColor.font.dark)
+  }
+  
+  func darkTitleSemiBold(){
+    self.setStyleSemiBold(size: UIFont.sizes.title , color: UIColor.font.dark)
+  }
+  
+  func graySubTitle(){
+    self.setStyleRegular(size: UIFont.sizes.subTitle, color: UIColor.font.grayGranite)
+  }
+  
+  func darkNormal(){
+    self.setStyleMedium(size: UIFont.sizes.normal, color: UIColor.font.dark)
+  }
+  
+}
+
 
 extension UINavigationController{
   
@@ -26,6 +66,16 @@ extension UINavigationController{
     navigationBar.tintColor = .darkGray
     navigationBar.standardAppearance = appearance
     navigationBar.scrollEdgeAppearance = appearance
+  }
+}
+
+extension UIView{
+  func cardShadow(){
+    self.layer.cornerRadius = 5
+    self.layer.shadowColor = UIColor.black.cgColor
+    self.layer.shadowOffset = CGSize(width: 0.0, height: 0.0)
+    self.layer.shadowRadius = 3.0
+    self.layer.shadowOpacity = 0.7
   }
 }
 

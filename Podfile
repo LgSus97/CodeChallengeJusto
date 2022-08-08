@@ -18,5 +18,6 @@ target 'CodeChallengeJusto' do
   
 pod 'AlamofireImage', '~> 4.1'
 pod "Apollo"
+pod "youtube-ios-player-helper"
 
 end

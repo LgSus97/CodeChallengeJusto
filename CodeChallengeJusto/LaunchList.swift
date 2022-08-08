@@ -9,7 +9,7 @@ public final class LaunchesQuery: GraphQLQuery {
   public let operationDefinition: String =
     """
     query Launches {
-      launches {
+      launches(limit: 10) {
         __typename
         launch_date_local
         launch_site {
@@ -18,18 +18,14 @@ public final class LaunchesQuery: GraphQLQuery {
         }
         mission_id
         mission_name
-        rocket {
+        details
+        links {
           __typename
-          rocket_name
-          rocket {
-            __typename
-            company
-            name
-            mass {
-              __typename
-              kg
-            }
-          }
+          article_link
+          flickr_images
+          mission_patch_small
+          presskit
+          video_link
         }
       }
     }
@@ -45,7 +41,7 @@ public final class LaunchesQuery: GraphQLQuery {
 
     public static var selections: [GraphQLSelection] {
       return [
-        GraphQLField("launches", type: .list(.object(Launch.selections))),
+        GraphQLField("launches", arguments: ["limit": 10], type: .list(.object(Launch.selections))),
       ]
     }
 
@@ -78,7 +74,8 @@ public final class LaunchesQuery: GraphQLQuery {
           GraphQLField("launch_site", type: .object(LaunchSite.selections)),
           GraphQLField("mission_id", type: .list(.scalar(String.self))),
           GraphQLField("mission_name", type: .scalar(String.self)),
-          GraphQLField("rocket", type: .object(Rocket.selections)),
+          GraphQLField("details", type: .scalar(String.self)),
+          GraphQLField("links", type: .object(Link.selections)),
         ]
       }
 
@@ -88,8 +85,8 @@ public final class LaunchesQuery: GraphQLQuery {
         self.resultMap = unsafeResultMap
       }
 
-      public init(launchDateLocal: String? = nil, launchSite: LaunchSite? = nil, missionId: [String?]? = nil, missionName: String? = nil, rocket: Rocket? = nil) {
-        self.init(unsafeResultMap: ["__typename": "Launch", "launch_date_local": launchDateLocal, "launch_site": launchSite.flatMap { (value: LaunchSite) -> ResultMap in value.resultMap }, "mission_id": missionId, "mission_name": missionName, "rocket": rocket.flatMap { (value: Rocket) -> ResultMap in value.resultMap }])
+      public init(launchDateLocal: String? = nil, launchSite: LaunchSite? = nil, missionId: [String?]? = nil, missionName: String? = nil, details: String? = nil, links: Link? = nil) {
+        self.init(unsafeResultMap: ["__typename": "Launch", "launch_date_local": launchDateLocal, "launch_site": launchSite.flatMap { (value: LaunchSite) -> ResultMap in value.resultMap }, "mission_id": missionId, "mission_name": missionName, "details": details, "links": links.flatMap { (value: Link) -> ResultMap in value.resultMap }])
       }
 
       public var __typename: String {
@@ -137,12 +134,21 @@ public final class LaunchesQuery: GraphQLQuery {
         }
       }
 
-      public var rocket: Rocket? {
+      public var details: String? {
         get {
-          return (resultMap["rocket"] as? ResultMap).flatMap { Rocket(unsafeResultMap: $0) }
+          return resultMap["details"] as? String
         }
         set {
-          resultMap.updateValue(newValue?.resultMap, forKey: "rocket")
+          resultMap.updateValue(newValue, forKey: "details")
+        }
+      }
+
+      public var links: Link? {
+        get {
+          return (resultMap["links"] as? ResultMap).flatMap { Link(unsafeResultMap: $0) }
+        }
+        set {
+          resultMap.updateValue(newValue?.resultMap, forKey: "links")
         }
       }
 
@@ -185,14 +191,17 @@ public final class LaunchesQuery: GraphQLQuery {
         }
       }
 
-      public struct Rocket: GraphQLSelectionSet {
-        public static let possibleTypes: [String] = ["LaunchRocket"]
+      public struct Link: GraphQLSelectionSet {
+        public static let possibleTypes: [String] = ["LaunchLinks"]
 
         public static var selections: [GraphQLSelection] {
           return [
             GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-            GraphQLField("rocket_name", type: .scalar(String.self)),
-            GraphQLField("rocket", type: .object(Rocket.selections)),
+            GraphQLField("article_link", type: .scalar(String.self)),
+            GraphQLField("flickr_images", type: .list(.scalar(String.self))),
+            GraphQLField("mission_patch_small", type: .scalar(String.self)),
+            GraphQLField("presskit", type: .scalar(String.self)),
+            GraphQLField("video_link", type: .scalar(String.self)),
           ]
         }
 
@@ -202,8 +211,8 @@ public final class LaunchesQuery: GraphQLQuery {
           self.resultMap = unsafeResultMap
         }
 
-        public init(rocketName: String? = nil, rocket: Rocket? = nil) {
-          self.init(unsafeResultMap: ["__typename": "LaunchRocket", "rocket_name": rocketName, "rocket": rocket.flatMap { (value: Rocket) -> ResultMap in value.resultMap }])
+        public init(articleLink: String? = nil, flickrImages: [String?]? = nil, missionPatchSmall: String? = nil, presskit: String? = nil, videoLink: String? = nil) {
+          self.init(unsafeResultMap: ["__typename": "LaunchLinks", "article_link": articleLink, "flickr_images": flickrImages, "mission_patch_small": missionPatchSmall, "presskit": presskit, "video_link": videoLink])
         }
 
         public var __typename: String {
@@ -215,119 +224,48 @@ public final class LaunchesQuery: GraphQLQuery {
           }
         }
 
-        public var rocketName: String? {
+        public var articleLink: String? {
           get {
-            return resultMap["rocket_name"] as? String
+            return resultMap["article_link"] as? String
           }
           set {
-            resultMap.updateValue(newValue, forKey: "rocket_name")
+            resultMap.updateValue(newValue, forKey: "article_link")
           }
         }
 
-        public var rocket: Rocket? {
+        public var flickrImages: [String?]? {
           get {
-            return (resultMap["rocket"] as? ResultMap).flatMap { Rocket(unsafeResultMap: $0) }
+            return resultMap["flickr_images"] as? [String?]
           }
           set {
-            resultMap.updateValue(newValue?.resultMap, forKey: "rocket")
+            resultMap.updateValue(newValue, forKey: "flickr_images")
           }
         }
 
-        public struct Rocket: GraphQLSelectionSet {
-          public static let possibleTypes: [String] = ["Rocket"]
-
-          public static var selections: [GraphQLSelection] {
-            return [
-              GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-              GraphQLField("company", type: .scalar(String.self)),
-              GraphQLField("name", type: .scalar(String.self)),
-              GraphQLField("mass", type: .object(Mass.selections)),
-            ]
+        public var missionPatchSmall: String? {
+          get {
+            return resultMap["mission_patch_small"] as? String
           }
-
-          public private(set) var resultMap: ResultMap
-
-          public init(unsafeResultMap: ResultMap) {
-            self.resultMap = unsafeResultMap
+          set {
+            resultMap.updateValue(newValue, forKey: "mission_patch_small")
           }
+        }
 
-          public init(company: String? = nil, name: String? = nil, mass: Mass? = nil) {
-            self.init(unsafeResultMap: ["__typename": "Rocket", "company": company, "name": name, "mass": mass.flatMap { (value: Mass) -> ResultMap in value.resultMap }])
+        public var presskit: String? {
+          get {
+            return resultMap["presskit"] as? String
           }
-
-          public var __typename: String {
-            get {
-              return resultMap["__typename"]! as! String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "__typename")
-            }
+          set {
+            resultMap.updateValue(newValue, forKey: "presskit")
           }
+        }
 
-          public var company: String? {
-            get {
-              return resultMap["company"] as? String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "company")
-            }
+        public var videoLink: String? {
+          get {
+            return resultMap["video_link"] as? String
           }
-
-          public var name: String? {
-            get {
-              return resultMap["name"] as? String
-            }
-            set {
-              resultMap.updateValue(newValue, forKey: "name")
-            }
-          }
-
-          public var mass: Mass? {
-            get {
-              return (resultMap["mass"] as? ResultMap).flatMap { Mass(unsafeResultMap: $0) }
-            }
-            set {
-              resultMap.updateValue(newValue?.resultMap, forKey: "mass")
-            }
-          }
-
-          public struct Mass: GraphQLSelectionSet {
-            public static let possibleTypes: [String] = ["Mass"]
-
-            public static var selections: [GraphQLSelection] {
-              return [
-                GraphQLField("__typename", type: .nonNull(.scalar(String.self))),
-                GraphQLField("kg", type: .scalar(Int.self)),
-              ]
-            }
-
-            public private(set) var resultMap: ResultMap
-
-            public init(unsafeResultMap: ResultMap) {
-              self.resultMap = unsafeResultMap
-            }
-
-            public init(kg: Int? = nil) {
-              self.init(unsafeResultMap: ["__typename": "Mass", "kg": kg])
-            }
-
-            public var __typename: String {
-              get {
-                return resultMap["__typename"]! as! String
-              }
-              set {
-                resultMap.updateValue(newValue, forKey: "__typename")
-              }
-            }
-
-            public var kg: Int? {
-              get {
-                return resultMap["kg"] as? Int
-              }
-              set {
-                resultMap.updateValue(newValue, forKey: "kg")
-              }
-            }
+          set {
+            resultMap.updateValue(newValue, forKey: "video_link")
           }
         }
       }

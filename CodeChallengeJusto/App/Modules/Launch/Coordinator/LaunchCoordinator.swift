@@ -23,6 +23,13 @@ class LaunchCoordinator: Coordinator {
   func start() {
     
   }
-
+  
+  func presentDetailLaunch(item: LaunchesQuery.Data.Launch){
+    let DetailLaunchViewController = DetailLaunchViewController.instantiate(fromStoryboard: "Launch")
+    DetailLaunchViewController.setup(coordinator: self, item: item)
+    navigationController.pushViewController(DetailLaunchViewController, animated: true)
+  }
+  
+  
 }
 
