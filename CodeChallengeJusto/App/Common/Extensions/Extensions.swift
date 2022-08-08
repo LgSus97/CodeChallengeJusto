@@ -47,6 +47,51 @@ extension UILabel{
   
 }
 
+extension UIButton{
+  func solid(radius:CGFloat? = 20){
+    self.clipsToBounds = true
+    self.setBackgroundColor(color: UIColor(named: "ApolloAzure") ?? .blue, forState: .normal)
+    self.setBackgroundColor(color: UIColor(named: "GrayGranite") ?? .lightGray, forState: .disabled)
+    self.setTitleColor(.white, for: .normal)
+    self.setTitleColor(.darkGray, for: .disabled)
+    self.tintColor = .white
+    self.setDefaultHeight()
+    self.layer.cornerRadius = radius ?? 20;
+  }
+  
+  func setBackgroundColor(color: UIColor, forState: UIControl.State){
+    self.clipsToBounds = true
+    UIGraphicsBeginImageContext(CGSize(width: 1, height: 1))
+    if let context = UIGraphicsGetCurrentContext(){
+      context.setFillColor(color.cgColor)
+      context.fill(CGRect(x: 0, y: 0, width: 1, height: 1))
+      let colorImage = UIGraphicsGetImageFromCurrentImageContext()
+      UIGraphicsEndImageContext()
+      self.setBackgroundImage(colorImage, for: forState)
+    }
+  }
+  
+  func setDefaultHeight(){
+    let heightConstraint = NSLayoutConstraint(item: self, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 40)
+    self.addConstraint(heightConstraint)
+  }
+}
+extension String{
+  var youtubeID: String? {
+      let pattern = "((?<=(v|V)/)|(?<=be/)|(?<=(\\?|\\&)v=)|(?<=embed/))([\\w-]++)"
+
+      let regex = try? NSRegularExpression(pattern: pattern, options: .caseInsensitive)
+      let range = NSRange(location: 0, length: count)
+
+      guard let result = regex?.firstMatch(in: self, range: range) else {
+          return nil
+      }
+
+      return (self as NSString).substring(with: result.range)
+  }
+  
+}
+
 
 extension UINavigationController{
   

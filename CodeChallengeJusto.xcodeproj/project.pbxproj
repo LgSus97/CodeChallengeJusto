@@ -15,6 +15,11 @@
 		C050AAEF28A08FEC00616794 /* ZoomAndSnapFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050AAEE28A08FEC00616794 /* ZoomAndSnapFlowLayout.swift */; };
 		C050AAF428A090BE00616794 /* CarrouselCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050AAF228A090BE00616794 /* CarrouselCollectionViewCell.swift */; };
 		C050AAF528A090BE00616794 /* CarrouselCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C050AAF328A090BE00616794 /* CarrouselCollectionViewCell.xib */; };
+		C050AAF928A0AF3B00616794 /* YTVideo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C050AAF828A0AF3A00616794 /* YTVideo.storyboard */; };
+		C050AAFB28A0B10F00616794 /* YTVideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050AAFA28A0B10F00616794 /* YTVideoPlayerViewController.swift */; };
+		C050AAFE28A0B29A00616794 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050AAFD28A0B29A00616794 /* Tools.swift */; };
+		C050AB0128A0B7ED00616794 /* WebView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C050AB0028A0B7ED00616794 /* WebView.storyboard */; };
+		C050AB0328A0B82600616794 /* WebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C050AB0228A0B82600616794 /* WebViewViewController.swift */; };
 		C0979C8B289F0DDE006AD353 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8A289F0DDE006AD353 /* AppDelegate.swift */; };
 		C0979C8D289F0DDE006AD353 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */; };
 		C0979C8F289F0DDE006AD353 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0979C8E289F0DDE006AD353 /* LaunchViewController.swift */; };
@@ -77,6 +82,11 @@
 		C050AAEE28A08FEC00616794 /* ZoomAndSnapFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomAndSnapFlowLayout.swift; sourceTree = "<group>"; };
 		C050AAF228A090BE00616794 /* CarrouselCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarrouselCollectionViewCell.swift; sourceTree = "<group>"; };
 		C050AAF328A090BE00616794 /* CarrouselCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarrouselCollectionViewCell.xib; sourceTree = "<group>"; };
+		C050AAF828A0AF3A00616794 /* YTVideo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = YTVideo.storyboard; sourceTree = "<group>"; };
+		C050AAFA28A0B10F00616794 /* YTVideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTVideoPlayerViewController.swift; sourceTree = "<group>"; };
+		C050AAFD28A0B29A00616794 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		C050AB0028A0B7ED00616794 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
+		C050AB0228A0B82600616794 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
 		C0979C87289F0DDE006AD353 /* CodeChallengeJusto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallengeJusto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0979C8A289F0DDE006AD353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -187,6 +197,32 @@
 			path = Launch;
 			sourceTree = "<group>";
 		};
+		C050AAF728A0AF2100616794 /* TYVideo */ = {
+			isa = PBXGroup;
+			children = (
+				C050AAF828A0AF3A00616794 /* YTVideo.storyboard */,
+				C050AAFA28A0B10F00616794 /* YTVideoPlayerViewController.swift */,
+			);
+			path = TYVideo;
+			sourceTree = "<group>";
+		};
+		C050AAFC28A0B26B00616794 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				C050AAFD28A0B29A00616794 /* Tools.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		C050AAFF28A0B7D800616794 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				C050AB0028A0B7ED00616794 /* WebView.storyboard */,
+				C050AB0228A0B82600616794 /* WebViewViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		C0979C7E289F0DDD006AD353 = {
 			isa = PBXGroup;
 			children = (
@@ -271,11 +307,14 @@
 		C0979CD5289F8B00006AD353 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C050AAFF28A0B7D800616794 /* WebView */,
+				C050AAF728A0AF2100616794 /* TYVideo */,
 				C050AAF028A0907000616794 /* Cells */,
 				C0979CEB289F9369006AD353 /* Views */,
 				C0979CDB289F8C0B006AD353 /* Storyboarded */,
 				C0979CD6289F8B0C006AD353 /* Coordinator */,
 				C0979CE3289F8D85006AD353 /* Extensions */,
+				C050AAFC28A0B26B00616794 /* Tools */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -490,8 +529,10 @@
 				C0979CEE289F9384006AD353 /* Loader.xib in Resources */,
 				C0979CC6289F24EB006AD353 /* schema.json in Resources */,
 				C050AAF528A090BE00616794 /* CarrouselCollectionViewCell.xib in Resources */,
+				C050AB0128A0B7ED00616794 /* WebView.storyboard in Resources */,
 				C0979C94289F0DE1006AD353 /* Assets.xcassets in Resources */,
 				C0979CEA289F92A4006AD353 /* loading.gif in Resources */,
+				C050AAF928A0AF3B00616794 /* YTVideo.storyboard in Resources */,
 				C0979CC2289F11D8006AD353 /* LaunchList.graphql in Resources */,
 				C0979C92289F0DDE006AD353 /* Launch.storyboard in Resources */,
 			);
@@ -645,6 +686,8 @@
 				C050AAEB28A0854500616794 /* UIFont+Styles.swift in Sources */,
 				C0979C8F289F0DDE006AD353 /* LaunchViewController.swift in Sources */,
 				C050AAF428A090BE00616794 /* CarrouselCollectionViewCell.swift in Sources */,
+				C050AAFE28A0B29A00616794 /* Tools.swift in Sources */,
+				C050AAFB28A0B10F00616794 /* YTVideoPlayerViewController.swift in Sources */,
 				C0979CBE289F116F006AD353 /* ApolloNetworkHelper.swift in Sources */,
 				C0979C8B289F0DDE006AD353 /* AppDelegate.swift in Sources */,
 				C0979CE2289F8D50006AD353 /* LaunchCoordinator.swift in Sources */,
@@ -659,6 +702,7 @@
 				C0979CF2289F9541006AD353 /* LoaderPresentable.swift in Sources */,
 				C0979CCA289F2CAF006AD353 /* LaunchViewModel.swift in Sources */,
 				C0979CF4289F95AC006AD353 /* Image+Gif.swift in Sources */,
+				C050AB0328A0B82600616794 /* WebViewViewController.swift in Sources */,
 				C0979CDA289F8B88006AD353 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

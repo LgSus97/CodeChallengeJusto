@@ -15,9 +15,9 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
   @IBOutlet weak var detailLabel: UILabel!
   
   
-  @IBOutlet weak var ytVideoButton: UIButton!
   
-  
+  @IBOutlet weak var playVideoButton: UIButton!
+  @IBOutlet weak var infoLaunchButton: UIButton!
   private weak var coordinator: LaunchCoordinator?
   
   var item : LaunchesQuery.Data.Launch?
@@ -43,7 +43,6 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
     pageControl.isHidden = true
     setDelegates()
     setCollection()
-   // getCarrouselPhotos()
     
     // Do any additional setup after loading the view.
   }
@@ -64,11 +63,16 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
   }
   
   func setTextAndStyles(){
+    detailLabel.graySubTitle()
     detailLabel.text = item?.details
     detailLabel.lineBreakMode = .byWordWrapping
     detailLabel.numberOfLines = 0
     
-    ytVideoButton.setTitle("YT Video", for: .normal)
+    playVideoButton.solid()
+    infoLaunchButton.solid()
+    
+    playVideoButton.setTitle("YT Video", for: .normal)
+    infoLaunchButton.setTitle("Launch Info", for: .normal)
   }
   
   func setDelegates() {
@@ -85,6 +89,9 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
   }
   
   func dispatchTimer() {
+    guard flickrImages?.count ?? .zero > 0 else {
+      return
+    }
     self.timer = Timer.scheduledTimer(withTimeInterval: 4, repeats: true) { [weak self] timer in
       self?.changeImage()
     }
@@ -101,6 +108,7 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
       counter = 0
       let index = IndexPath.init(item: counter, section: 0)
       self.collectionView.scrollToItem(at: index, at: .centeredHorizontally, animated: true)
+      self.collectionView.setNeedsLayout()
       pageControl.currentPage = counter
       counter = 1
     }
@@ -122,6 +130,14 @@ class DetailLaunchViewController: UIViewController, Storyboarded, LoaderPresenta
     collectionView.isScrollEnabled = true
     let nib = UINib(nibName: "CarrouselCollectionViewCell", bundle: nil)
     collectionView.register(nib, forCellWithReuseIdentifier: "CarrouselCell")
+  }
+  
+  @IBAction func ytVideoAction(_ sender: Any) {
+    coordinator?.presentYTPlayer(urlVideo: item?.links?.videoLink ?? "")
+  }
+  
+  @IBAction func infoLaunchAction(_ sender: Any) {
+    coordinator?.presentWebView(urlInfo: item?.links?.presskit ?? "")
   }
   
 }

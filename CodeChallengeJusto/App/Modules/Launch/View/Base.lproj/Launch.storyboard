@@ -20,7 +20,8 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ZVy-vR-Jyd">
                                 <rect key="frame" x="20" y="74" width="374" height="758"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="WhiteGray"/>
+                                <color key="sectionIndexBackgroundColor" name="WhiteGray"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="shB-OX-mCA"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="ZL3-8B-SrG"/>
@@ -28,7 +29,7 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="WhiteGray"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZVy-vR-Jyd" secondAttribute="bottom" constant="30" id="4R5-VH-dsU"/>
                             <constraint firstItem="ZVy-vR-Jyd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7RN-kq-GYS"/>
@@ -66,7 +67,7 @@
                                                         <subviews>
                                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="80k-eT-O1d">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="180"/>
-                                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                <color key="backgroundColor" name="WhiteGray"/>
                                                                 <constraints>
                                                                     <constraint firstAttribute="height" constant="180" id="xyN-fZ-eK9"/>
                                                                 </constraints>
@@ -83,7 +84,9 @@
                                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jPp-ne-UII">
                                                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                                                             <autoresizingMask key="autoresizingMask"/>
+                                                                            <color key="backgroundColor" name="WhiteGray"/>
                                                                         </collectionViewCellContentView>
+                                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                                     </collectionViewCell>
                                                                 </cells>
                                                             </collectionView>
@@ -95,18 +98,20 @@
                                                                 </constraints>
                                                             </pageControl>
                                                         </subviews>
+                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0PR-5Z-FXD">
                                                         <rect key="frame" x="0.0" y="222" width="414" height="60.5"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qyt-Mw-2u9">
                                                                 <rect key="frame" x="20" y="0.0" width="374" height="60.5"/>
+                                                                <color key="backgroundColor" name="WhiteGray"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="qyt-Mw-2u9" secondAttribute="trailing" constant="20" id="4nw-lC-VWX"/>
                                                             <constraint firstAttribute="bottom" secondItem="qyt-Mw-2u9" secondAttribute="bottom" id="GPQ-UP-G4W"/>
@@ -122,7 +127,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="play.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DGK-Oq-MEA">
                                                                         <rect key="frame" x="0.0" y="0.5" width="69" height="45"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                                         <color key="tintColor" systemColor="systemPinkColor"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="69" id="KPN-FW-eYj"/>
@@ -133,11 +138,15 @@
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="ytVideoAction:" destination="A1V-oE-Rmb" eventType="touchUpInside" id="363-0x-EOa"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
+                                                                <color key="backgroundColor" name="WhiteGray"/>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                         <constraints>
                                                             <constraint firstItem="j6n-dz-1sE" firstAttribute="leading" secondItem="Sol-hv-gBE" secondAttribute="leading" constant="30" id="1an-ew-a73"/>
                                                             <constraint firstAttribute="height" constant="46" id="ToX-MK-Usg"/>
@@ -154,7 +163,7 @@
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="info.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="agM-W6-O4V">
                                                                         <rect key="frame" x="0.0" y="0.5" width="69" height="45"/>
-                                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                                         <color key="tintColor" name="ApolloAzure"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="69" id="wkd-b2-uFx"/>
@@ -165,11 +174,15 @@
                                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                                        <connections>
+                                                                            <action selector="infoLaunchAction:" destination="A1V-oE-Rmb" eventType="touchUpInside" id="AK9-Kc-d5S"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
+                                                                <color key="backgroundColor" name="WhiteGray"/>
                                                             </stackView>
                                                         </subviews>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" name="WhiteGray"/>
                                                         <constraints>
                                                             <constraint firstItem="urR-tK-rwK" firstAttribute="top" secondItem="X0J-jz-z4j" secondAttribute="top" id="21k-6p-9l1"/>
                                                             <constraint firstAttribute="trailing" secondItem="urR-tK-rwK" secondAttribute="trailing" constant="30" id="GnV-Pb-jfT"/>
@@ -179,9 +192,10 @@
                                                         </constraints>
                                                     </view>
                                                 </subviews>
+                                                <color key="backgroundColor" name="WhiteGray"/>
                                             </stackView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <color key="backgroundColor" name="WhiteGray"/>
                                         <constraints>
                                             <constraint firstItem="T1U-pt-nbx" firstAttribute="leading" secondItem="0dY-to-Yc5" secondAttribute="leading" id="8sV-ep-yMv"/>
                                             <constraint firstAttribute="trailing" secondItem="T1U-pt-nbx" secondAttribute="trailing" id="JS0-0T-UZv"/>
@@ -189,6 +203,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <color key="backgroundColor" name="WhiteGray"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="0dY-to-Yc5" secondAttribute="bottom" id="0Xj-uF-9qB"/>
                                     <constraint firstItem="0dY-to-Yc5" firstAttribute="top" secondItem="7vu-Ji-QIA" secondAttribute="top" id="3jz-pZ-hjS"/>
@@ -200,7 +215,7 @@
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="lOC-Jx-5Bs"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="WhiteGray"/>
                         <constraints>
                             <constraint firstItem="lOC-Jx-5Bs" firstAttribute="bottom" secondItem="7vu-Ji-QIA" secondAttribute="bottom" id="45t-Qa-VQg"/>
                             <constraint firstItem="7vu-Ji-QIA" firstAttribute="top" secondItem="lOC-Jx-5Bs" secondAttribute="top" id="GjS-zo-Xbt"/>
@@ -211,7 +226,9 @@
                     <connections>
                         <outlet property="collectionView" destination="80k-eT-O1d" id="382-iU-FBp"/>
                         <outlet property="detailLabel" destination="qyt-Mw-2u9" id="zdX-vk-4qh"/>
+                        <outlet property="infoLaunchButton" destination="tES-UT-wtB" id="T3q-dl-aMg"/>
                         <outlet property="pageControl" destination="2T4-pw-eRg" id="1m9-mk-5Jr"/>
+                        <outlet property="playVideoButton" destination="xNR-WD-P7Y" id="zWa-y9-zue"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JHl-0t-g0y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,6 +241,9 @@
         <image name="play.circle.fill" catalog="system" width="128" height="121"/>
         <namedColor name="ApolloAzure">
             <color red="0.0" green="0.18431372549019609" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="WhiteGray">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

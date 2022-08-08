@@ -4,8 +4,8 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,6 +20,7 @@
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ver-VC-h31">
                         <rect key="frame" x="8" y="8" width="164" height="164"/>
+                        <color key="backgroundColor" name="WhiteGray"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="Ver-VC-h31" secondAttribute="height" multiplier="1:1" id="vda-tH-0Po"/>
                         </constraints>
@@ -29,35 +30,38 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8br-Xr-oV6">
                                 <rect key="frame" x="0.0" y="0.0" width="218" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" name="WhiteGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyV-R8-nTO">
                                 <rect key="frame" x="0.0" y="60" width="218" height="60"/>
+                                <color key="backgroundColor" name="WhiteGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWS-uJ-Au7">
                                 <rect key="frame" x="0.0" y="120" width="218" height="60"/>
+                                <color key="backgroundColor" name="WhiteGray"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="WhiteGray"/>
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IKo-CQ-ncC">
                         <rect key="frame" x="403.5" y="82" width="26.5" height="16.5"/>
+                        <color key="backgroundColor" name="WhiteGray"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="IKo-CQ-ncC" secondAttribute="height" multiplier="4:3" id="3GV-Cg-C4p"/>
                         </constraints>
                         <imageReference key="image" image="chevron.forward" catalog="system" renderingMode="original"/>
                     </imageView>
                 </subviews>
-                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <color key="backgroundColor" name="WhiteGray"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="ubd-WQ-u9S" secondAttribute="trailing" constant="30" id="6Lo-9g-zWM"/>
                     <constraint firstItem="IKo-CQ-ncC" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7jJ-pg-O0f"/>
@@ -71,6 +75,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" name="WhiteGray"/>
             <connections>
                 <outlet property="contenerView" destination="H2p-sc-9uM" id="LZV-7z-vog"/>
                 <outlet property="dateLabel" destination="eWS-uJ-Au7" id="YYi-lb-6ry"/>
@@ -83,8 +88,8 @@
     </objects>
     <resources>
         <image name="chevron.forward" catalog="system" width="96" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="WhiteGray">
+            <color red="0.97299998998641968" green="0.97299998998641968" blue="0.97299998998641968" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -30,6 +30,18 @@ class LaunchCoordinator: Coordinator {
     navigationController.pushViewController(DetailLaunchViewController, animated: true)
   }
   
+  func presentYTPlayer(urlVideo:String){
+    let ytVideoPlayerViewController = YTVideoPlayerViewController.instantiate(fromStoryboard: "YTVideo")
+    ytVideoPlayerViewController.setup(urlVideo: urlVideo)
+    navigationController.pushViewController(ytVideoPlayerViewController, animated: true)
+  }
+  
+  func presentWebView(urlInfo:String){
+    let webViewViewController = WebViewViewController.instantiate(fromStoryboard: "WebView")
+    webViewViewController.setup(url: urlInfo)
+    navigationController.pushViewController(webViewViewController, animated: true)
+  }
+
   
 }
 

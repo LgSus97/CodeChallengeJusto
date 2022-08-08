@@ -23,6 +23,12 @@ class CarrouselCollectionViewCell: UICollectionViewCell {
     // Initialization code
   }
   
+  override func prepareForReuse() {
+      super.prepareForReuse()
+      //hide or reset anything you want hereafter, for example
+    carouselImage.image = UIImage()
+  }
+  
   func setCell(){
     print(" - - - - -")
     print(flickrImage)
