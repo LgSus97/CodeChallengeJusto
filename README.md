@@ -9,6 +9,20 @@ Code Challenge Justo / Jesus Loaiza Herrera
 
 - Launches Past list 
 
+![Simulator Screen Shot - iPhone 13 Pro Max - 2022-08-08 at 01 58 36](https://user-images.githubusercontent.com/77905244/183358257-3d4dab2c-9aa4-4db5-a0aa-afc99950edd3.png)
+
+
+- Details launch
+
+![IMG_0486](https://user-images.githubusercontent.com/77905244/183357809-efa3bc49-b39f-486f-a9ea-65c3abafb9ef.PNG)
+
+- Video launch
+
+![IMG_0487](https://user-images.githubusercontent.com/77905244/183357887-17056e77-d1ff-46dd-a435-24c3e210b957.PNG)
+
+- Info launch
+
+![IMG_0489](https://user-images.githubusercontent.com/77905244/183357945-0c77d117-039b-4242-a922-8a88b00ce8c4.PNG)
 
 
 ### Project Structure
