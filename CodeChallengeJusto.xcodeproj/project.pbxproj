@@ -87,6 +87,7 @@
 		C050AAFD28A0B29A00616794 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		C050AB0028A0B7ED00616794 /* WebView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = WebView.storyboard; sourceTree = "<group>"; };
 		C050AB0228A0B82600616794 /* WebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewViewController.swift; sourceTree = "<group>"; };
+		C054231D28A0E34800AEB2EB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C0979C87289F0DDE006AD353 /* CodeChallengeJusto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeChallengeJusto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0979C8A289F0DDE006AD353 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,7 +160,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C050AAE728A06D5800616794 /* GrapghQL */ = {
+		C050AAE728A06D5800616794 /* GrahphQL */ = {
 			isa = PBXGroup;
 			children = (
 				C0979CC5289F24EB006AD353 /* schema.json */,
@@ -167,7 +168,7 @@
 				C0979CBF289F1195006AD353 /* LaunchList.swift */,
 				C0979CC1289F11D8006AD353 /* LaunchList.graphql */,
 			);
-			name = GrapghQL;
+			name = GrahphQL;
 			sourceTree = "<group>";
 		};
 		C050AAF028A0907000616794 /* Cells */ = {
@@ -226,6 +227,7 @@
 		C0979C7E289F0DDD006AD353 = {
 			isa = PBXGroup;
 			children = (
+				C054231D28A0E34800AEB2EB /* README.md */,
 				C0979C89289F0DDE006AD353 /* CodeChallengeJusto */,
 				C0979CA0289F0DE1006AD353 /* CodeChallengeJustoTests */,
 				C0979CAA289F0DE1006AD353 /* CodeChallengeJustoUITests */,
@@ -249,7 +251,7 @@
 			isa = PBXGroup;
 			children = (
 				C0979CD4289F8AF7006AD353 /* App */,
-				C050AAE728A06D5800616794 /* GrapghQL */,
+				C050AAE728A06D5800616794 /* GrahphQL */,
 				C0979CE8289F926C006AD353 /* Resources */,
 				C0979C8A289F0DDE006AD353 /* AppDelegate.swift */,
 				C0979C8C289F0DDE006AD353 /* SceneDelegate.swift */,
